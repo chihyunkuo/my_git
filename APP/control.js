@@ -7,10 +7,10 @@ function beat() {
     if(typeof(Storage) !== "undefined") {
         if (sessionStorage.clickcount) {
 			var count = Number(sessionStorage.clickcount);
-			if (count > 14) {
+			if (count > 15) {
 				count = 1;
 			} else {
-				count = count + 2;
+				count = count + 3;
 			}
         } else {
         	count = 1;
