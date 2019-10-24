@@ -79,9 +79,9 @@ div.grid4 {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
 }
-.fas {
+.fas { /*控制動畫的變化*/
   animation-name: heartbeat;
-    animation-duration: var(--heartbeat);
+  animation-duration: var(--heartbeat);
   animation-iteration-count: infinite;
 }
 
