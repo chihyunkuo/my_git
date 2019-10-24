@@ -1,5 +1,5 @@
 :root {
-	--back_color: gray;
+	--back_color: pink;
 	--heartbeat: 0s;
 }
 body {
@@ -48,7 +48,7 @@ div.grid3 {
 }
 
 div.grid4 {
-  background-color: yellow;
+  background-color: var(--back_color);
   animation-name: ani_grid4;
   animation-duration: 5s;
 }
