@@ -44,13 +44,13 @@ div.grid2 {
 div.grid3 {
   background-color: blue;
   animation-name: ani_grid3;
-  animation-duration: 5s;
+  animation-duration: 10s;
 }
 
 div.grid4 {
   background-color: var(--back_color);
   animation-name: ani_grid4;
-  animation-duration: 5s;
+  animation-duration: 8s;
 }
 
 /* CSS transform standard syntax */
