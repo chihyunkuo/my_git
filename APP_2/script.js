@@ -19,7 +19,7 @@ $(document).ready(function() {
 			// console.log("Get Taiwan weather success.");
 		})
 		.done(function(arr) {
-			console.log("The second success.");
+			console.log("JSON.stringify(arr)");
 			// var outStr = JSON.stringify(arr);
 
 			var time_1 = arr.records.location[0].weatherElement[0].time[0].startTime.substr(5,8).replace("-","/") + "時";
