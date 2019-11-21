@@ -22,6 +22,7 @@ $(document).ready(function() {
 			console.log("JSON.stringify(arr)");
 			// var outStr = JSON.stringify(arr);
 
+
 			var time_1 = arr.records.location[0].weatherElement[0].time[0].startTime.substr(5,8).replace("-","/") + "時";
 			var time_2 = arr.records.location[0].weatherElement[0].time[1].startTime.substr(5,8).replace("-","/") + "時";
 			var time_3 = arr.records.location[0].weatherElement[0].time[2].startTime.substr(5,8).replace("-","/") + "時";
@@ -31,6 +32,7 @@ $(document).ready(function() {
 			$("#day2").text(time_1);
 			$("#day3").text(time_2);
 			$("#day4").text(time_3);
+
 
 			//天氣概況 #weather-description
 			var weather_1 = arr.records.location[0].weatherElement[0].time[0].parameter.parameterName;
@@ -42,6 +44,7 @@ $(document).ready(function() {
 			//Use dictionary to map weather icon (ForecastElement.PDF)
 			var weather_dict = {1:"clear-day",2:"partly-cloudy-day",3:"partly-cloudy-day",4:"partly-cloudy-day",5:"cloudy",6:"cloudy",7:"cloudy",8:"rain",9:"rain"};
 
+
 			// console.log(weather_value_1,weather_value_2,weather_value_3);
 			var skycons = new Skycons({"color": "#A9DD9B"});
 			skycons.set("weather-icon", weather_dict[weather_value_1]);
@@ -50,9 +53,11 @@ $(document).ready(function() {
 			skycons.set("weather-icon-day4", weather_dict[weather_value_3]);
 			skycons.play();
 
+
 			//舒適度 #feels-like
 			var fl_1 = arr.records.location[0].weatherElement[3].time[0].parameter.parameterName;
 			$("#feels-like").text(fl_1);
+
 
 			//溫度 #temp #day2-high-low, day3-high-low, day4-high-low
 			var minT_1 = arr.records.location[0].weatherElement[2].time[0].parameter.parameterName;
@@ -65,6 +70,7 @@ $(document).ready(function() {
 			$("#day2-high-low").text(minT_1 + "~" + maxT_1 + "°C");
 			$("#day3-high-low").text(minT_2 + "~" + maxT_2 + "°C");
 			$("#day4-high-low").text(minT_3 + "~" + maxT_3 + "°C");
+
 
 			//降雨機率 #day2-precip, day3-precip, day4-precip
 			var rain_1 = arr.records.location[0].weatherElement[1].time[0].parameter.parameterName;
@@ -81,6 +87,7 @@ $(document).ready(function() {
 			// console.log("Get Taiwan weather complete.");
 		});
 	}
+
 
 	//華氏攝氏轉換 Celsius & Fahrenheit conversion function
 	function C2F(c_degree) {
