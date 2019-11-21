@@ -19,7 +19,7 @@ $(document).ready(function() {
 			// console.log("Get Taiwan weather success.");
 		})
 		.done(function(arr) {
-			console.log("JSON.stringify(arr)");
+			console.log("json.stringify(arr)");
 			// var outStr = JSON.stringify(arr);
 
 
@@ -124,8 +124,9 @@ $(document).ready(function() {
         }
 
 		function getPosition(position) {
-			lat = position.coords.latitude;
-			lon = position.coords.longitude;
+			lat = position.coords.latitude; //緯度
+			lon = position.coords.longitude; //經度
+			console.log(lat,lon);
 
 			//Reverse geocoding is the process of converting geographic coordinates into a human-readable address.
 			//Google reverse geocoding API
@@ -143,6 +144,7 @@ $(document).ready(function() {
 
 			$.ajax(settings).done(function (response) {
 				var loc_city = response.address.city;
+				console.log(response);
 				getTaiwanWeather(loc_city);
 			});
 		}
